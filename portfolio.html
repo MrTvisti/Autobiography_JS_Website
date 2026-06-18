@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <title>Портфолио</title>
+</head>
+<body>
+    <div id="header-layout"></div>
+    <main>
+        <h2 class="caption">Портфолио</h2>
+        <div class="filter-block">
+            <input type="text" id="project-search" class="search-field" placeholder="Поиск среди проектов..." />
+            <select id="tech-filter" class="diagButton">
+                <option value="">Все технологии</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="HTML">HTML/CSS</option>
+                <option value="PostgreSQL">PostgreSQL</option>
+                <option value="C#">C#</option>
+                <option value="Django">Django</option>
+            </select>
+        </div>
+        <div class="cards" id="projects-layout"></div>
+        <hr class="section-divider">
+        <div class="table-controls">
+            <input type="text" id="table-search" class="search-field" placeholder="Поиск..." />
+            <button id="reset-table-btn" class="diagButton reset-table-btn"> Сбросить</button>
+        </div>
+        <div id="table-layout" class="table-container">
+            <p style="text-align: center; color: #e6b448;">Загрузка данных таблицы...</p>
+        </div>
+    </main>
+    <div id="footer-layout"></div>
+    <script type="module" src="js/main.js"></script> 
+</body>
+</html>

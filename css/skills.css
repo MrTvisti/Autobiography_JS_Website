@@ -1,0 +1,188 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    width: 60vw;
+}
+.card {
+    display: flex;
+    background-color: #CDCCE6;
+    border-radius: 20px;
+    width: 60vw;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow:
+    0 0 6px rgba(106, 102, 175, 0.1),   
+    0 0 12px rgba(106, 102, 175, 0.2),  
+    0 0 18px rgba(106, 102, 175, 0.3),   
+    0 0 24px rgba(106, 102, 175, 0.5);   
+}
+.text_block {
+    display: flex;
+    margin-left: 50px;
+    gap: 50px;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    width: 60vw;
+}
+.skill-card {
+    background-color: #CDCCE6;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 1rem auto 2rem auto;
+    box-shadow: 0 4px 15px rgba(106, 102, 175, 0.3);
+    max-width: 400px;
+}
+.skill-card h3 {
+    color: #6A66AF;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.calc-box, .converter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    align-items: center;
+}
+.calc-box input, .calc-box select,
+.converter-box input, .converter-box select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #6A66AF;
+    border-radius: 8px;
+    background-color: white;
+    overflow-wrap: break-word;  
+}
+.calc-box input:focus, .calc-box select:focus,
+.converter-box input:focus, .converter-box select:focus {
+    outline: none;
+    border-color: #e6b448;
+    box-shadow: 0 0 8px rgba(230, 180, 72, 0.5);
+}
+.calc-box button, .converter-box button {
+    padding: 12px 20px;
+    font-size: 1.3rem;
+    background-color: #6A66AF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+.calc-box button:hover, .converter-box button:hover {
+    background-color: #e6b448;
+    transform: scale(1.02);
+}
+#calc-submit-btn, #conv-submit-btn {
+    width: 100%;
+}
+.result {
+    display: flex;
+    align-items: center;
+    min-height: 102px;
+    width: 100%;
+    color: #6A66AF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    border-left: 5px solid #6A66AF;
+    margin-top: 10px;
+}
+.arrow-swap {
+    text-align: center;
+    color: #6A66AF;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+.arrow-swap:hover {
+    color: #e6b448;
+    transform: scale(1.1);
+}
+.arrow-swap:active {
+    transform: scale(0.95);
+}
+.reset-btn {
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.p1, ol {
+    line-height: 42px;
+}
+ol {
+    list-style-type: none;
+}
+ol li::before {
+    content: "★";
+    color: black;
+    margin-right: 1rem;
+}
+table, td {
+    border: 2px solid #6A66AF;
+    border-radius: 20px;
+    border-collapse: collapse;
+}
+tr:first-child {
+    font-weight: bold;
+}
+td {
+    font-size: 26px;
+    padding: 16px;
+}
+@media screen and (max-width: 767px) {
+    .block {
+        grid-template-columns: 1fr;
+        margin: 1.25rem auto;
+        padding: 0 3rem;
+        justify-items: center;
+    }
+    .block, .card, .text_block {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .skill-card {
+        width: 85vw;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+    .calc-box, .converter-box {
+        max-width: 100%;
+    }
+    .calc-box select,
+    .converter-box select {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    .skill-card {
+        margin: 20px auto;
+        margin-left: 37vw;
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 1023px) {
+    .calc-box select option,
+    .converter-box select option {
+        font-size: 0.9rem;
+        white-space: normal;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about_me.css">
+    <title>Обо мне</title>
+</head>
+<body>
+    <div id="header-layout"></div>
+    <main>
+        <h2 class="caption">Обо мне</h2>
+        <dialog id="modalWindow" class="modal-window">
+            <h2>Нет времени читать всю информацию?</h2>
+            <p>Я подготовил для вас своё <br><a class="a_resume" href="static/resume/resume.pdf" download="Резюме">=> Резюме <=</a></p>
+            <div class="closeButtonBlock">
+                <button id="closeButton" class="diagButton">Закрыть</button>
+            </div>
+        </dialog>
+        <div class="diagButtonBlock">
+            <button id="openButton" class="diagButton">Время играет для вас важную роль?</button>
+        </div>
+        <div class="text1">
+            <div class="text1_block">
+                <h2>Мой путь</h2>
+                <ul class="points" id="biography-steps"></ul>
+            </div>
+            <div class="images">
+                <img class="text1_img" src="static/images/Yamal.png" alt="Ямал" width="600" height="400" loading="eager"/>
+                <img class="text1_img" src="static/images/Comp_science.jpg" alt="Информатика" width="600" height="400" loading="eager"/>
+                <img class="text1_img" src="static/images/Design.jpg" alt="Дизайн" width="600" height="400" loading="lazy"/>
+            </div>
+        </div>
+        <div class="quote-background">
+            <p class="quote">Вот <strong>вдохновляющая</strong> цитата, которая мне нравится:</p>
+        </div>
+        <div class="text2">
+            <blockquote>
+                <p><span class="symbols">&ldquo;</span>Если вы думаете, что на что-то способны, вы правы; если думаете, что у вас ничего не получится — вы тоже правы.<span class="symbols">&rdquo;</span></p>
+                <cite>&copy; Генри Форд, американский промышленник</cite>
+            </blockquote>
+        </div>
+    </main>
+    <div id="footer-layout"></div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

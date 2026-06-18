@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <title>Навыки</title>
+</head>
+<body>
+    <div id="header-layout"></div>
+    <main>
+        <h2 class="caption">Навыки</h2>
+        <div class="skills-container">
+            <div class="skill-card modern-calc">
+                <h3>Простой калькулятор</h3>
+                <div class="calc-box">
+                    <input type="text" id="num1" value="0" placeholder="Число 1" inputmode="decimal"/>
+                    <select id="operation">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                    <input type="text" id="num2" value="0" placeholder="Число 2" inputmode="decimal"/>                    
+                    <button id="calc-submit-btn">= Посчитать</button>
+                    <button id="calc-reset-btn" class="reset-btn">&#8634; Сбросить</button>                    <div class="result" id="calcResult">
+                        Результат: —
+                    </div>
+                </div>
+            </div>
+            <div class="skill-card modern-converter">
+                <h3>Конвертер валют</h3>
+                <div class="converter-box">
+                    <input type="text" id="convAmount" value="0" placeholder="Количество" inputmode="decimal"/>
+                    <select id="currency1">
+                        <option value="RUB">Российский рубль (&#8381;)</option>
+                        <option value="USD">Американский доллар ($)</option>
+                        <option value="EUR">Евро (&#8364;)</option>
+                        <option value="CNY">Китайский юань (&#165;)</option>
+                        <option value="GBP">Британский фунт (&#163;)</option>
+                        <option value="JPY">Японская иена (&#165;)</option>
+                        <option value="TRY">Турецкая лира (&#8378;)</option>
+                        <option value="KZT">Казахстанский тенге (&#8376;)</option>
+                        <option value="UAH">Украинская гривна (&#8372;)</option>
+                        <option value="BYN">Белорусский рубль (Br)</option>
+                        <option value="UZS">Узбекский сум (so'm)</option>
+                        <option value="AED">Дирхам ОАЭ (&#1583;.&#1573;)</option>
+                        <option value="PLN">Польский злотый (z&#322;)</option>
+                    </select>
+                    <span class="arrow-swap">&#8645;</span>
+                    <select id="currency2">
+                        <option value="RUB">Российский рубль (&#8381;)</option>
+                        <option value="USD">Американский доллар ($)</option>
+                        <option value="EUR">Евро (&#8364;)</option>
+                        <option value="CNY">Китайский юань (&#165;)</option>
+                        <option value="GBP">Британский фунт (&#163;)</option>
+                        <option value="JPY">Японская иена (&#165;)</option>
+                        <option value="TRY">Турецкая лира (&#8378;)</option>
+                        <option value="KZT">Казахстанский тенге (&#8376;)</option>
+                        <option value="UAH">Украинская гривна (&#8372;)</option>
+                        <option value="BYN">Белорусский рубль (Br)</option>
+                        <option value="UZS">Узбекский сум (so'm)</option>
+                        <option value="AED">Дирхам ОАЭ (&#1583;.&#1573;)</option>
+                        <option value="PLN">Польский злотый (z&#322;)</option>
+                    </select>
+                    <button id="conv-submit-btn">= Посчитать</button>
+                    <button id="conv-reset-btn" class="reset-btn">&#8634; Сбросить</button>                    <div class="result" id="convResult">
+                        Результат: —
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </main>
+    <div id="footer-layout"></div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

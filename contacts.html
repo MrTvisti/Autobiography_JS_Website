@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <title>Контакты</title>
+</head>
+<body>
+    <div id="header-layout"></div>
+    <main>
+        <h2 class="caption">Контакты</h2>
+        <div class="text1">
+            <div class="text1_block">
+                <h2>Мои контакты</h2>
+                <p class="p1">
+                    <br />
+                    <strong>Телефон:</strong> +7&nbsp;(932)&nbsp;053-61-51
+                    <br />
+                    <strong>Почта:</strong> rusya.nizamov06@gmail.com
+                </p>
+            </div>
+        </div>
+        <div class="form_block">
+            <form id="contact-form">
+                <div class="form-container">
+                    <label for="fio-input">Ваше ФИО:</label>
+                    <input type="text" id="fio-input" placeholder="Введите ФИО через пробел...">
+                    <div id="fio-output"></div>
+                </div>
+                <div class="form-container">
+                    <label for="phone-input">Ваш телефон:</label>
+                    <input type="tel" id="phone-input" placeholder="+7 (XXX) XXX-XX-XX">
+                    <div id="phone-output"></div>
+                </div>
+                <div class="form-container">
+                    <label for="email-input">Ваш Email:</label>
+                    <input type="email" id="email-input" placeholder="Введите email...">
+                    <div id="email-output"></div>
+                </div>
+                <div class="form-container">
+                    <label for="photo-input">Ваша фотография (по желанию):</label>
+                    <input type="file" id="photo-input" accept="image/*">
+                    <div id="photo-preview"></div>
+                </div>
+                <div class="form-container">
+                    <label for="date-input">Желаемая дата связи:</label>
+                    <input type="date" id="date-input">
+                    <div id="date-output"></div>
+                </div>
+                <div class="form-container">
+                    <label for="message-input">Сообщение:</label>
+                    <textarea id="message-input" placeholder="Ваше сообщение..."></textarea>
+                </div>
+                <button type="submit" class="submit_button">Отправить</button>
+            </form>
+        </div>
+    </main>
+    <div id="footer-layout"></div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

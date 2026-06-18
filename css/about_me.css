@@ -1,0 +1,315 @@
+.modal-window {
+    margin: auto;
+    text-align: center;
+    border: 0px;
+    background-color: #CDCCE6;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 0 32px rgba(230, 180, 72, 0.5);
+    opacity: 0;
+    transform: scale(0.5) translateY(-15px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.modal-window[open] {
+    animation: modalAppear 0.3s ease forwards;
+}
+.modal-window::backdrop {
+    animation: backdropAppear 0.3s ease forwards;
+}
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+@keyframes backdropAppear {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+.modal-window p {
+    padding: 1rem;
+    margin: 0;
+}
+.modal-window h2 {
+    padding: 0;
+    text-align: center;
+}
+.diagButtonBlock, .closeButtonBlock {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+    width: auto;
+    text-align: center;
+}
+.diagButton {
+    padding: 0.5rem;
+    background-color: #6A66AF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.diagButton:hover {
+    background-color: #e6b448;
+    transform: scale(1.02);
+}
+.diagButton:active {
+    transform: scale(0.95);
+}
+.text1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: 70vw;
+    background-color: #CDCCE6;
+    border-radius: 20px;
+    margin: 2.5rem; 
+    padding: 2.5rem;
+    box-shadow:
+    0 0 6px rgba(106, 102, 175, 0.1),   
+    0 0 12px rgba(106, 102, 175, 0.2),  
+    0 0 18px rgba(106, 102, 175, 0.3),   
+    0 0 24px rgba(106, 102, 175, 0.5);   
+}
+.text1_block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.text1_block h2 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.text1_img {
+    border: 3px solid #6A66AF;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem auto;
+    display: block;
+}
+.images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 20vw;
+}
+.points {
+    width: 100%;
+}
+.text1_block li {
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+li {
+    line-height: 42px;
+}
+.text2 {
+    background-image: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(0, 0, 0, 0.5)
+    ), url("/static/images/Henry_Ford.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    height: 36rem;
+    max-height: 60%;
+}
+.quote-background {
+    max-width: 100%;
+    width: 100%;
+    background-color:rgba(223, 223, 223, 1);
+    padding: 4px;
+}
+.quote {
+    max-width: 100%;
+    margin: 5rem auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+.text1_block li, .text1_block strong, .text1_block em, .diagButton, .quote, .quote strong, blockquote p {
+    font-size: 1.7rem;
+}
+blockquote {
+    margin: 2.5rem auto;
+    text-align: right;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 70vw;
+}
+blockquote p {
+    text-align: right;
+    margin: 2.5rem auto;
+}
+cite {
+    font-size: 1.5rem;
+}
+.symbols {
+    font-size: 2.2rem;
+}
+.a_resume {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.a_resume:hover {
+    color: #6A66AF;
+}
+.hover-image-trigger {
+    cursor: default;
+    border-bottom: none; 
+    color: inherit;
+    font-weight: normal;
+    display: inline;
+}
+.hover-image-popup {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .text1_block {
+        width: 100%;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+    .diagButtonBlock {
+        max-width: 80%;
+        justify-self: center;
+    }
+    .text1_block h2 {
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .text1_block ul {
+        list-style-position: inside;
+        padding-left: 0;
+    }
+    blockquote p {
+        font-size: 1.5rem;
+    }
+    .text1_block li, .text1_block strong, .text1_block em, .diagButton, cite {
+        font-size: 1.2rem;
+    }
+    .text1_img {
+        width: 100%;
+    }
+    .hover-image-trigger {
+        cursor: pointer;
+        border-bottom: 2px dotted #6A66AF;
+        color: #6A66AF;
+        font-weight: bold;
+        display: inline-block;
+        transition: color 0.2s;
+        position: relative;
+    }
+    .hover-image-trigger:hover {
+        color: #e6b448;
+        border-bottom-color: #e6b448;
+    }
+    .hover-image-popup {
+        display: none;
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        background: white;
+        padding: 8px;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(106, 102, 175, 0.4);
+        min-width: 150px;
+        max-width: 250px;
+        pointer-events: none;
+    }
+    .hover-image-popup::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 8px solid transparent;
+        border-top-color: white;
+    }
+    .hover-image-popup img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 4px;
+        display: block;
+        border: 2px solid #6A66AF;
+        z-index: 10000;
+    }
+    .hover-image-trigger.active .hover-image-popup {
+        display: block;
+        animation: fadeIn 0.2s ease-in;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+    .images {
+        display: none;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    .text1, .quote, .diagButtonBlock {
+        margin-left: 26vw;
+        margin-right: 3vw;
+    }
+    .text2 {
+        margin-left: 20vw;
+    }
+    .text1_block {
+        width: 100%;
+        max-width: 600px;
+    }
+    .text1_block h2 {
+        text-align: center;
+    }
+    .text1_block ol {
+        text-align: center;
+        list-style-position: inside;
+        padding-left: 0;
+    }
+    .images {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .text1_block li, .text1_block strong, .text1_block em, .diagButton, .quote, .quote strong, blockquote p {
+        font-size: 1.5rem;
+    }
+    cite {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,349 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem;
+}
+.card {
+    display: flex;
+    flex: 0 0 calc(25% - 20px);
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: #CDCCE6;
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 50%;
+    margin: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+.card, .card:hover {
+    box-shadow:
+        0 0 6px rgba(106, 102, 175, 0.1),
+        0 0 12px rgba(106, 102, 175, 0.2),
+        0 0 18px rgba(106, 102, 175, 0.3),
+        0 0 24px rgba(106, 102, 175, 0.5);
+}
+.cards .card {
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    box-sizing: border-box;
+    margin: 2rem 4px;
+}
+.card_text {
+    overflow-wrap: break-word;
+    line-height: 1.5;
+}
+.point {
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+.card_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.p1, a, .card_text {
+    font-size: 1.5rem;
+}
+.p1, ol, ul {
+    line-height: 2.25rem;
+}
+.project_image {
+    border: 2px solid #6A66AF;
+    width: 20vw;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    margin: 1.25rem;
+}
+.project_caption {
+    vertical-align: top;
+    margin: 1.25rem 0;
+}
+.filter-block, .table-controls {
+    margin: 2rem 0;
+}
+.search-field, .diagButton {
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+.filter-block, .table-controls, .table-container {
+    justify-self: center;
+}
+.table-controls, .modern-table {
+    margin: 1.5rem;
+}
+#tech-filter {
+    background-color: #6A66AF;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.search-field {
+    border: 2px solid #e6b448;
+    border-radius: 0.5rem;
+    width: auto;
+}
+.search-field:focus {
+    outline: none;
+    border-color: #ffae00;
+    box-shadow: 0 0 32px rgba(230, 180, 72, 0.5);
+}
+.modern-table {
+    width: 100%;
+    max-width: 80vw;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #CDCCE6;
+    border-radius: 12px;
+    overflow: hidden;
+    table-layout: fixed;
+    box-shadow: 0 0 24px rgba(106, 102, 175, 0.5);
+}
+.modern-table thead {
+    display: table-header-group;
+}
+.modern-table th {
+    position: relative;
+    background-color: #6A66AF;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 1.1rem;
+}
+.modern-table th,
+.modern-table td {
+    min-width: 140px;
+    word-wrap: break-word;
+}
+.th-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+.modern-table tbody tr {
+    display: table-row;
+    background-color: #CDCCE6;;
+    box-shadow: none;
+    border-radius: 0;
+}
+.modern-table tbody td {
+    display: table-cell;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #6A66AF;
+    text-align: left;
+    font-size: 1.1rem;
+}
+.modern-table tbody tr:last-child {
+    border-bottom: 0;
+}
+.modern-table tbody td::before {
+    content: none;
+}
+.table-container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+.sort-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 2px 6px;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+.sort-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    transform: scale(1.1);
+}
+.sort-btn:active {
+    transform: scale(0.95);
+}
+.diagButton {
+    background-color: #6A66AF;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    transition: all 0.3s;
+}
+.reset-table-btn:hover {
+    background-color: #e6b448;
+    transform: scale(1.05);
+}
+.reset-table-btn:active {
+    transform: scale(0.95);
+}
+.mobile-sort-controls {
+        display: none;
+}
+@media screen and (max-width: 767px) {
+    .search-field, .diagButton, .p1, .points li, a  {
+        font-size: 1rem;
+    }
+    .filter-block, .table-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .cards .card {
+        flex: 0 0 100%;
+        max-width: 80%;
+        width: 100%;
+    }
+    .project_image {
+        width: 40vw;
+        max-width: 100%;
+        margin: 1.25rem auto;
+    }
+    .modern-table {
+        margin: 0;
+        padding: 0;
+    }
+    .modern-table thead {
+        display: none;
+    }
+    .modern-table th {
+        justify-content: center;
+    }
+    .sort-btn {
+        display: none;
+    }
+    .modern-table tbody tr {
+        display: block;
+        margin: 1rem 0;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(106, 102, 175, 0.3);
+    }
+    .modern-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        border: none;
+        border-bottom: 1px solid #CDCCE6;
+        text-align: right;
+        font-size: 1rem;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+    }
+    .modern-table tbody td:last-child {
+        border-bottom: none;
+    }
+    .modern-table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #6A66AF;
+        margin-right: 1rem;
+        text-align: left;
+        flex-shrink: 0;
+    }
+    .mobile-sort-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        background-color: #CDCCE6;
+        border-radius: 12px;
+        box-shadow: 0 0 24px rgba(106, 102, 175, 0.5);
+    }
+    .mobile-sort-btn {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 120px;
+        padding: 0.75rem;
+        background-color: #6A66AF;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .mobile-sort-btn:hover {
+        background-color: #e6b448;
+        transform: scale(1.02);
+    }
+    .mobile-sort-btn:active {
+        transform: scale(0.95);
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    .cards {
+        margin: 0;
+        margin-left: 25vw;
+        justify-content: center;
+        gap: 20px;
+    }
+    .cards .card {
+        flex: 0 0 calc(50% - 20px);
+        max-width: 100%;
+    }
+    .project_image {
+        width: 30vw;
+    }
+    .filter-block, .table-controls, .table-container {
+        margin-left: 26vw;    
+    }
+    .sort-btn {
+        display: inline-block;
+    }
+    .modern-table {
+        max-width: 100%;
+    }
+    .modern-table th {
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
+    .table-container {
+        margin-left: 26vw;
+        max-width: 71vw;
+    }
+    .search-field, .diagButton {
+        padding: 1rem;
+    }
+    .modern-table th,
+    .modern-table td,
+    .search-field, 
+    .diagButton {
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 767px) {
+    .modern-table tbody tr:nth-child(even) {
+        background-color: #6A66AF;
+        color: white;
+    }
+}
